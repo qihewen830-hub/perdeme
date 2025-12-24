@@ -89,6 +89,27 @@
       "datePublished": "2025-12-23"
     }
     </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+Swal.fire({
+    icon: 'info',
+    title: 'Bilgilendirme',
+    html: `
+        Server URL adresimizde değişiklik oldu.<br>
+        Canlı destek üzerinden düzeltebilirsiniz.
+        <br><br>
+        <a href="https://t.me/vizyoniptvdestek" target="_blank">
+            https://t.me/vizyoniptvdestek
+        </a>
+    `,
+    confirmButtonText: 'Canlı Desteğe Git',
+}).then(() => {
+    window.open('https://t.me/vizyoniptvdestek', '_blank');
+});
+</script>
+
 </head>
 <body class="bg-gray-50 text-gray-900 leading-relaxed">
 
