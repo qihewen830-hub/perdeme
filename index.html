@@ -93,20 +93,25 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <script>
-Swal.fire({
-    icon: 'info',
-    title: 'Bilgilendirme',
-    html: `
-        Server URL adresimizde değişiklik oldu.<br>
-        Canlı destek üzerinden düzeltebilirsiniz.
-        <br><br>
-        <a href="https://t.me/vizyoniptvdestek" target="_blank">
-            https://t.me/vizyoniptvdestek
-        </a>
-    `,
-    confirmButtonText: 'Canlı Desteğe Git',
-}).then(() => {
-    window.open('https://t.me/vizyoniptvdestek', '_blank');
+document.addEventListener('DOMContentLoaded', function () {
+    Swal.fire({
+        icon: 'info',
+        title: 'Bilgilendirme',
+        html: `
+            Server URL adresimizde değişiklik oldu.<br>
+            Canlı destek üzerinden düzeltebilirsiniz.
+            <br><br>
+            <a href="https://t.me/vizyoniptvdestek" target="_blank">
+                https://t.me/vizyoniptvdestek
+            </a>
+        `,
+        confirmButtonText: 'Canlı Desteğe Git',
+        allowOutsideClick: false
+    }).then((result) => {
+        if (result.isConfirmed) {
+            window.open('https://t.me/vizyoniptvdestek', '_blank');
+        }
+    });
 });
 </script>
 
